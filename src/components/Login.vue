@@ -56,8 +56,9 @@ export default {
                 type: 'success'
               })
               this.$message.success('登录成功')
-              window.sessionStorage.setItem('token', resp.data.data)
-              // this.$store.commit('login', { UsersPhone: this.form.username, token: resp.data.Data })
+              window.sessionStorage.setItem('token', resp.data.data.token)
+              window.sessionStorage.setItem('UserName', resp.data.data.username)
+              window.sessionStorage.setItem('UserId', resp.data.data.userid)
               this.$router.push('/index')
             } else {
               return this.$message.error(resp.data.msg)

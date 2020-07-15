@@ -4,7 +4,8 @@ import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
 import Index from '../components/Index.vue'
 import Home from '../components/Home.vue'
-import About from '../components/About.vue'
+import MyDiary from '../components/MyDiary.vue'
+import Editor from '../components/common/Editor.vue'
 
 Vue.use(VueRouter)
 
@@ -27,9 +28,13 @@ const routes = [{
     name: 'index',
     component: Index
   }, {
-    path: '/about',
-    name: 'about',
-    component: About
+    path: '/MyDiary',
+    name: 'MyDiary',
+    component: MyDiary
+  }, {
+    path: '/Editor',
+    name: 'Editor',
+    component: Editor
   }]
 }
 

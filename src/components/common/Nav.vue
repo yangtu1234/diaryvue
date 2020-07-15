@@ -59,9 +59,8 @@ export default {
     return {
       navList: [
         { name: '/index', navItem: '日记动态' },
-        { name: '/mydiary', navItem: '我的日记' },
-        { name: '/manager', navItem: '管理日记' },
-        { name: '/about', navItem: '关于我们' }
+        { name: '/MyDiary', navItem: '我的日记' },
+        { name: '/myLike', navItem: '我的收藏' }
       ],
       avatar: '',
       avatarVisible: false,

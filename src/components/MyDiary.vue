@@ -1,6 +1,6 @@
 <template>
   <div style="margin-top: 40px">
-    <!--<el-button @click="adddata()">添加文章</el-button>-->
+    <router-link class="el-button" :to="{path:'Editor'}">添加文章</router-link>
     <div class="datas-area">
       <el-card style="text-align: left" v-loading="loading">
         <div v-for="data in datas" :key="data.diaryId" style="padding-top:40px">
@@ -29,7 +29,6 @@
             </el-row> -->
       </el-card>
     </div>
-
   </div>
 </template>
 
@@ -38,6 +37,7 @@ export default {
   name: 'datas',
   data () {
     return {
+      dialogFormVisible: false,
       datas: [],
       loading: true,
       pageInfo: {
@@ -51,6 +51,9 @@ export default {
     this.loadDiary()
   },
   methods: {
+    adddata () {
+      this.dialogFormVisible = true
+    },
     loadDiary () {
       this.$axios.get('Diary', {
         params: {

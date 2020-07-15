@@ -1,5 +1,8 @@
 <template lang="html">
   <div class="editor">
+    <el-button>取消</el-button>
+<el-button>保存草稿</el-button>
+<el-button>发布</el-button>
     <div ref="toolbar" class="toolbar">
     </div>
     <div ref="editor" class="text">
